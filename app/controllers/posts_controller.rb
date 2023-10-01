@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+ 
   def index
     @posts = Post.order(id: :asc).limit(10)
   end
@@ -9,8 +10,6 @@ class PostsController < ApplicationController
 
   private
   def post_params
-    params.require(:post).permit(:title, :content)
+    params.require(:post).permit(:body)
   end
-
-
 end

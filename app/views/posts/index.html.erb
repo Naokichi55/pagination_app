@@ -1,11 +1,4 @@
 <h1>投稿一覧</h1>
-<%= form_with model: @post, url: "/posts" do |form| %>
-<div>
-  <%= form.text_field :body %>
-  <%= form.submit "送信" %>
-</div>
-<div>
-  <%= render @posts %>
-  <%= paginate @posts %>
-</div>
-<% end %>
+<%= render "form" %>
+<%= render @posts %>
+<%= paginate @posts %>

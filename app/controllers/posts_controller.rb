@@ -1,11 +1,16 @@
 class PostsController < ApplicationController
  
+  PER_PAGE = 10
+
+
   def index
-    @posts = Post.order(id: :asc).limit(10)
+    @post = Post.new
+    @posts = Post.order(id: :desc).page(params[:page]).per(PER_PAGE)
   end
 
   def create
     post = Post.create!(post_params)
+    redirect_back fallback_location: root_path
   end
 
   private

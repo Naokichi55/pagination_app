@@ -43,6 +43,8 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem "bootsnap", require: false
 
 gem 'faker', require: false
+gem 'kaminari'
+gem 'pry-byebug'
 # Use Sass to process CSS
 # gem "sassc-rails"
 

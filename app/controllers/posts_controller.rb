@@ -10,7 +10,7 @@ class PostsController < ApplicationController
 
   def create
     post = Post.create!(post_params)
-    redirect_back fallback_location: @post
+    redirect_back fallback_location: root_path
   end
 
   private
